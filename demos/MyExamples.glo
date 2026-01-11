@@ -1,0 +1,25 @@
+! Calculates the factorial of a number
+ΠΡΟΓΡΑΜΜΑ factorial              ! PROGRAM factorial
+
+ΜΕΤΑΒΛΗΤΕΣ                       ! VARIABLES
+  ΑΚΕΡΑΙΕΣ: n, result, i         ! INTEGERS: n, result, i
+
+ΑΡΧΗ                             ! BEGIN
+  ΓΡΑΨΕ 'Δώσε έναν αριθμό:'      ! WRITE 'Enter a number:'
+  ΔΙΑΒΑΣΕ n                      ! READ n
+
+  result <- 1
+
+  ΑΝ n < 0 ΤΟΤΕ                  ! IF n < 0 THEN
+    ΓΡΑΨΕ 'Σφάλμα: Αρνητικός αριθμός'  ! WRITE 'Error: Negative number'
+  ΑΛΛΙΩΣ                         ! ELSE
+    ΑΝ n = 0 ΤΟΤΕ                ! IF n = 0 THEN
+      ΓΡΑΨΕ '0! = 1'             ! WRITE '0! = 1'
+    ΑΛΛΙΩΣ                       ! ELSE
+      ΓΙΑ i ΑΠΟ 1 ΜΕΧΡΙ n        ! FOR i FROM 1 TO n
+        result <- result * i
+      ΤΕΛΟΣ_ΕΠΑΝΑΛΗΨΗΣ           ! END_LOOP
+      ΓΡΑΨΕ n, '! = ', result    ! WRITE n, '! = ', result
+    ΤΕΛΟΣ_ΑΝ                     ! END_IF
+  ΤΕΛΟΣ_ΑΝ                       ! END_IF
+ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ               ! END_PROGRAM

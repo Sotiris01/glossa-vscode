@@ -1,0 +1,58 @@
+{
+  "name": "glossa-vscode",
+  "displayName": "Glossa Language Support",
+  "description": "Syntax highlighting and snippets for the Greek educational language GLOSSA.",
+  "version": "0.0.1",
+  "publisher": "Sotiris01",
+  "author": {
+    "name": "Mpalatsias Sotiris",
+    "email": "sotiris.mp@gmail.com",
+    "url": "https://github.com/Sotiris01"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "glossa",
+    "γλώσσα",
+    "greek",
+    "educational",
+    "programming"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sotiris01/glossa-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/Sotiris01/glossa-vscode/issues"
+  },
+  "homepage": "https://github.com/Sotiris01/glossa-vscode#readme",
+  "license": "MIT",
+  "contributes": {
+    "languages": [
+      {
+        "id": "glossa",
+        "aliases": [
+          "Glossa",
+          "ΓΛΩΣΣΑ"
+        ],
+        "extensions": [
+          ".gls",
+          ".glo"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "glossa",
+        "scopeName": "source.glossa",
+        "path": "./syntaxes/glossa.tmLanguage.json"
+      }
+    ]
+  }
+}

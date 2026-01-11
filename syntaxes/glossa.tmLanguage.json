@@ -1,0 +1,176 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GLOSSA",
+  "scopeName": "source.glossa",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#data-types" },
+    { "include": "#program-structure" },
+    { "include": "#control-flow" },
+    { "include": "#io-commands" },
+    { "include": "#operators" },
+    { "include": "#functions" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.exclamation.glossa",
+          "match": "!.*$",
+          "comment": "Line comments starting with exclamation mark"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.glossa",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.glossa",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.glossa",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.glossa",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.glossa",
+          "match": "\\b\\d+\\.\\d+\\b",
+          "comment": "Floating point numbers"
+        },
+        {
+          "name": "constant.numeric.integer.glossa",
+          "match": "\\b\\d+\\b",
+          "comment": "Integer numbers"
+        }
+      ]
+    },
+    "booleans": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.glossa",
+          "match": "(?i)\\b(ΑΛΗΘΗΣ|ΨΕΥΔΗΣ)\\b",
+          "comment": "Boolean literal values"
+        }
+      ]
+    },
+    "data-types": {
+      "patterns": [
+        {
+          "name": "storage.type.glossa",
+          "match": "(?i)\\b(ΑΚΕΡΑΙΕΣ|ΠΡΑΓΜΑΤΙΚΕΣ|ΧΑΡΑΚΤΗΡΕΣ|ΛΟΓΙΚΕΣ|ΑΚΕΡΑΙΑ|ΠΡΑΓΜΑΤΙΚΗ|ΧΑΡΑΚΤΗΡΑΣ|ΛΟΓΙΚΗ)\\b",
+          "comment": "Data type declarations - plural and singular forms"
+        }
+      ]
+    },
+    "program-structure": {
+      "patterns": [
+        {
+          "name": "keyword.other.program.glossa",
+          "match": "(?i)\\b(ΠΡΟΓΡΑΜΜΑ|ΑΛΓΟΡΙΘΜΟΣ|ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ|ΤΕΛΟΣ_ΑΛΓΟΡΙΘΜΟΥ|ΤΕΛΟΣ)\\b",
+          "comment": "Program and algorithm structure keywords"
+        },
+        {
+          "name": "storage.modifier.glossa",
+          "match": "(?i)\\b(ΣΤΑΘΕΡΕΣ|ΜΕΤΑΒΛΗΤΕΣ)\\b",
+          "comment": "Variable and constant declaration sections"
+        },
+        {
+          "name": "keyword.other.function.glossa",
+          "match": "(?i)\\b(ΣΥΝΑΡΤΗΣΗ|ΔΙΑΔΙΚΑΣΙΑ|ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ|ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ|ΚΑΛΕΣΕ)\\b",
+          "comment": "Function and procedure keywords"
+        }
+      ]
+    },
+    "control-flow": {
+      "patterns": [
+        {
+          "name": "keyword.control.conditional.glossa",
+          "match": "(?i)\\b(ΑΝ|ΤΟΤΕ|ΑΛΛΙΩΣ_ΑΝ|ΑΛΛΙΩΣ|ΤΕΛΟΣ_ΑΝ)\\b",
+          "comment": "Conditional statements"
+        },
+        {
+          "name": "keyword.control.select.glossa",
+          "match": "(?i)\\b(ΕΠΙΛΕΞΕ|ΠΕΡΙΠΤΩΣΗ|ΤΕΛΟΣ_ΕΠΙΛΟΓΩΝ)\\b",
+          "comment": "Select/case statements"
+        },
+        {
+          "name": "keyword.control.loop.glossa",
+          "match": "(?i)\\b(ΟΣΟ|ΕΠΑΝΑΛΑΒΕ|ΤΕΛΟΣ_ΕΠΑΝΑΛΗΨΗΣ|ΜΕΧΡΙΣ_ΟΤΟΥ|ΓΙΑ|ΑΠΟ|ΜΕΧΡΙ|ΜΕ_ΒΗΜΑ)\\b",
+          "comment": "Loop control keywords"
+        },
+        {
+          "name": "keyword.control.begin.glossa",
+          "match": "(?i)\\b(ΑΡΧΗ)\\b",
+          "comment": "Begin block keyword"
+        }
+      ]
+    },
+    "io-commands": {
+      "patterns": [
+        {
+          "name": "support.function.io.glossa",
+          "match": "(?i)\\b(ΔΙΑΒΑΣΕ|ΓΡΑΨΕ)\\b",
+          "comment": "Input/Output commands"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.glossa",
+          "match": "(?i)\\b(div|mod|DIV|MOD)\\b",
+          "comment": "Integer division and modulo operators"
+        },
+        {
+          "name": "keyword.operator.logical.glossa",
+          "match": "(?i)\\b(ΚΑΙ|Η|ΟΧΙ|KAI|H|OXI)\\b",
+          "comment": "Logical operators - Greek and Latin variants"
+        },
+        {
+          "name": "keyword.operator.assignment.glossa",
+          "match": "←|<-",
+          "comment": "Assignment operator (arrow)"
+        },
+        {
+          "name": "keyword.operator.comparison.glossa",
+          "match": "<=|>=|<>|<|>|=",
+          "comment": "Comparison operators"
+        },
+        {
+          "name": "keyword.operator.arithmetic.glossa",
+          "match": "[+\\-*/^]",
+          "comment": "Arithmetic operators"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.glossa",
+          "match": "(?i)\\b(Α_Μ|Α_Τ|ΗΜ|ΣΥΝ|ΕΦ|ΛΟΓ|Ε|Τ_Ρ)\\b",
+          "comment": "Built-in mathematical functions"
+        }
+      ]
+    }
+  }
+}
