@@ -1,0 +1,38 @@
+# VS Code Extension Ignore File
+# Files and folders listed here will be excluded from the packaged extension
+
+# Development and CI files
+.gemini/
+.github/
+.git/
+.gitignore
+.vscode/
+
+# Test files
+test_sample.gls
+demos/
+
+# Documentation (README is kept for Marketplace)
+CHANGELOG.md
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# TypeScript (if used later)
+src/
+*.ts
+tsconfig.json
+**/*.map
+
+# Build artifacts
+out/
+dist/
+*.vsix
+
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

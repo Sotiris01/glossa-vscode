@@ -2,8 +2,21 @@
 
 ![Version](https://img.shields.io/badge/version-0.0.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/sotiris01.glossa-vscode?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=sotiris01.glossa-vscode)
 
 Language support for **GLOSSA (ΓΛΩΣΣΑ)**, the Greek educational programming language used in secondary education.
+
+> 📚 **About GLOSSA:** GLOSSA is taught in Greek high schools as part of the "Development of Applications in Programming Environments" (ΑΕΠΠ) curriculum. The official interpreter is developed by **Άλκης Γεωργόπουλος** and available at [alkisg.mysch.gr](https://alkisg.mysch.gr/).
+
+## 📦 Installation
+
+**From VS Code Marketplace:**
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X`)
+3. Search for "Glossa Language Support"
+4. Click **Install**
+
+Or install directly: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sotiris01.glossa-vscode)
 
 ---
 
@@ -138,6 +151,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **Άλκης Γεωργόπουλος** — Creator of the GLOSSA interpreter (γλωσσα.exe) — [alkisg.mysch.gr](https://alkisg.mysch.gr/)
 - Inspired by [markoutso/glo](https://github.com/markoutso/glo.git)
 - The Greek educational community using GLOSSA
 - VS Code Extension development documentation
