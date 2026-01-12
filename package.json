@@ -2,7 +2,7 @@
   "name": "glossa-vscode",
   "displayName": "Glossa Language Support",
   "description": "Syntax highlighting and snippets for the Greek educational language GLOSSA.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Sotiris01",
   "author": {
     "name": "Mpalatsias Sotiris",

@@ -1,6 +1,6 @@
 # VS Code GLOSSA (ΓΛΩΣΣΑ)
 
-![Version](https://img.shields.io/badge/version-0.0.1-blue)
+![Version](https://img.shields.io/badge/version-0.0.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/sotiris01.glossa-vscode?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=sotiris01.glossa-vscode)
 
